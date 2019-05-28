@@ -18,24 +18,24 @@
 
 ``` json
 {
-	"code": 0,
-	"message": "success",
+	"code": 0,    // 接口结果 0.为成功 其他表示错误
+	"message": "success",   // 错误描述
 	"data": {
-		"pager": {
-			"limit": 10,
-			"start": 0,
-			"count": 1
+		"pager": {  // 分页相关内容
+			"limit": 10,    // 每次拉取个数
+			"start": 0,     // 记录开始下标
+			"count": 1      // 总条数
 		},
-		"list": [{
-			"id": 1,
-			"name": "花园洋房",
-			"villageAddress": "上海市xxx区xxx路x号x",
-			"villageImage": "http://ct.cn/uploads/eeb625c7e19167d73e461ffa0202640a.png",
-			"saleState": 2,
-			"activeDesc": "老住户98折",
-			"tags": [{
-				"name": "近商圈",
-				"level": 2,
+		"list": [{  // 租售列表内容
+			"id": 1,        // 本条租售信息唯一id
+			"name": "花园洋房", // 租售名称
+			"villageAddress": "上海市xxx区xxx路x号x", // 小区地址
+			"villageImage": "http://ct.cn/uploads/eeb625c7e19167d73e461ffa0202640a.png", // 小区缩略图
+			"saleState": 2, // 租售状态 1.新房 2.即将开盘 3.待售 4.售罄
+			"activeDesc": "老住户98折", // 折扣活动信息
+			"tags": [{ // 标签列表
+				"name": "近商圈", // 标签名称
+				"level": 2, // 标签样式 1.普通 2.高亮
 				"style": 1
 			}, {
 				"name": "开发区",
@@ -46,9 +46,9 @@
 				"level": 1,
 				"style": 1
 			}],
-			"price": 110000,
-			"priceUnit": "元/m²",
-			"area": "100~200m²"
+			"price": 110000, // 单价
+			"priceUnit": "元/m²", // 单价单位
+			"area": "100~200m²" // 户型大小描述
 		}]
 	}
 }
